@@ -2,7 +2,8 @@
 "use client";
 
 import { useState } from "react";
-import { extract, type Row } from "../lib/api";
+import { extract } from "../lib/api";
+import { type Row } from "../lib/row";
 
 export default function Home() {
   // Track state of url input and table rows
