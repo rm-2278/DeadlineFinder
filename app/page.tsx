@@ -85,6 +85,7 @@ export default function Home() {
                   {row.name}
                 </td>
                 <td className="px-4 py-3 text-sm break-words max-w-[200px]">
+                  {/* _blank specifies to open in new tab, noreferrer for security */}
                   <a href={row.url} target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline break-all">
                   {row.url}
                   </a>
