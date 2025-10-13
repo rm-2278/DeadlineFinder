@@ -1,11 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Row, RowSchema } from "./row"; // Import Row and RowSchema
 
-// Dynamically generate the response schema for Gemini's config
-const responseSchema = Object.fromEntries(
-    Object.keys(RowSchema.shape).map((key) => [key, "string"])
-);
-
 // The client gets the API key from the environment variable `GEMINI_API_KEY`.
 const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY, // Load the API key from environment variables
@@ -51,7 +46,7 @@ export async function processWithGemini(content: string): Promise<Row> {
         throw new Error("Response text is undefined");
     }
 
-    console.log("Raw response:", result);
+    // console.log("Raw response:", result);
 
     // Validate the response using the schema
     const parsedResult = JSON.parse(result);
