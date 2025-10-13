@@ -1,11 +1,4 @@
-// Create type for table rows
-export type Row = {
-  name: string;
-  url: string;
-  deadline: string;
-  commitment: string;
-  notes: string;
-};
+import { Row } from "./row"; // Import Row type from the shared row.ts file
 
 export async function extract(imageUrl: string): Promise<Row> {
     const res = await fetch("/api/extract", {

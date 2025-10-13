@@ -90,7 +90,9 @@ export default function Home() {
                 </td>
                 <td className="px-4 py-3 text-sm text-neutral-700">{row.deadline}</td>
                 <td className="px-4 py-3 text-sm text-neutral-700">{row.commitment}</td>
-                <td className="px-4 py-3 text-sm text-neutral-700">{row.notes}</td>
+                <td className="px-4 py-3 text-sm text-neutral-700 break-all">
+                  {row.notes}
+                </td>
               </tr>
             ))}
             {/* If no programs added yet, display message */}
